@@ -1,0 +1,33 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+}
+
+table,
+td,
+tr {}
+
+table {
+    border-collapse: collapse;
+    margin: auto;
+    margin-top: -1.5em;
+}
+
+td {
+    width: 60px;
+    height: 60px;
+    background-size: cover;
+}
+
+img#personatge {
+    height: auto;
+    width: 3%;
+    position: absolute;
+    top: 300px;
+    left: 700px;
+}

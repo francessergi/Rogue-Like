@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body onkeypress="mou(event)" onclick="create_room()">
+    <table id="room">
+        <img src="./img/personatge/front.png" alt="personatge" id="personatge">
+        <tr>
+            <td class="void"></td>
+            <td class="void"></td>
+            <td class="void"></td>
+            <td class="void"></td>
+            <td class="void"></td>
+            <td class="column-top2"></td>
+            <td class="void"></td>
+            <td class="void"></td>
+            <td class="void" id="door-top3"></td>
+            <td class="void" id="door-top4"></td>
+            <td class="void"></td>
+            <td class="void"></td>
+            <td class="column-top2"></td>
+            <td class="void"></td>
+            <td class="void"></td>
+            <td class="void"></td>
+            <td class="void"></td>
+            <td class="void"></td>
+        </tr>
+        <tr>
+            <td class="void"></td>
+            <td id="corner-top-left1"></td>
+            <td class="wall-top"></td>
+            <td class="wall-top"></td>
+            <td class="wall-top"></td>
+            <td class="column-top1"></td>
+            <td class="wall-top"></td>
+            <td class="wall-top"></td>
+            <td class="wall-top" id="door-top1"></td>
+            <td class="wall-top" id="door-top2"></td>
+            <td class="wall-top"></td>
+            <td class="wall-top"></td>
+            <td class="column-top1"></td>
+            <td class="wall-top"></td>
+            <td class="wall-top"></td>
+            <td class="wall-top"></td>
+            <td id="corner-top-right1"></td>
+            <td class="void"></td>
+        </tr>
+        <tr>
+            <td class="void"></td>
+            <td class="wall-left"></td>
+            <td class="floor"></td>
+            <td class="floor"></td>
+            <td class="floor"></td>
+            <td class="floor"></td>
+            <td class="floor"></td>
+            <td class="floor"></td>
+            <td class="floor"></td>
+            <td class="floor"></td>
+            <td class="floor"></td>
+            <td class="floor"></td>
+            <td class="floor"></td>
+            <td class="floor"></td>
+            <td class="floor"></td>
+            <td class="floor"></td>
+            <td class="wall-right"></td>
+            <td class="void"></td>
+        </tr>
+        <tr>
+            <td class="column-left2"></td>
+            <td class="column-left1"></td>
+            <td class="floor"></td>
+            <td class="floor"></td>
+            <td class="floor"></td>
+            <td class="floor"></td>
+            <td class="floor"></td>
+            <td class="floor"></td>
+            <td class="floor"></td>
+            <td class="floor"></td>
+            <td class="floor"></td>
+            <td class="floor"></td>
+            <td class="floor"></td>
+            <td class="floor"></td>
+            <td class="floor"></td>
+            <td class="floor"></td>
+            <td class="column-right1"></td>
+            <td class="column-right2"></td>
+        </tr>
+        <tr>
+            <td class="void"></td>
+            <td class="wall-left"></td>
+            <td class="floor"></td>
+            <td class="floor"></td>
+            <td class="floor"></td>
+            <td class="floor"></td>
+            <td class="floor"></td>
+            <td class="floor"></td>
+            <td class="floor"></td>
+            <td class="floor"></td>
+            <td class="floor"></td>
+            <td class="floor"></td>
+            <td class="floor"></td>
+            <td class="floor"></td>
+            <td class="floor"></td>
+            <td class="floor"></td>
+            <td class="wall-right"></td>
+            <td class="void"></td>
+        </tr>
+        <tr>
+            <td class="void" id="door-left1"></td>
+            <td class="wall-left" id="door-left2"></td>
+            <td class="floor"></td>
+            <td class="floor"></td>
+            <td class="floor"></td>
+            <td class="floor"></td>
+            <td class="floor"></td>
+            <td class="floor"></td>
+            <td class="floor"></td>
+            <td class="floor"></td>
+            <td class="floor"></td>
+            <td class="floor"></td>
+            <td class="floor"></td>
+            <td class="floor"></td>
+            <td class="floor"></td>
+            <td class="floor"></td>
+            <td class="wall-right" id="door-right1"></td>
+            <td class="void" id="door-right2"></td>
+        </tr>
+        <tr>
+            <td class="void" id="door-left3"></td>
+            <td class="wall-left" id="door-left4"></td>
+            <td class="floor"></td>
+            <td class="floor"></td>
+            <td class="floor"></td>
+            <td class="floor"></td>
+            <td class="floor"></td>
+            <td class="floor"></td>
+            <td class="floor"></td>
+            <td class="floor"></td>
+            <td class="floor"></td>
+            <td class="floor"></td>
+            <td class="floor"></td>
+            <td class="floor"></td>
+            <td class="floor"></td>
+            <td class="floor"></td>
+            <td class="wall-right" id="door-right3"></td>
+            <td class="void" id="door-right4"></td>
+        </tr>
+        <tr>
+            <td class="void"></td>
+            <td class="wall-left"></td>
+            <td class="floor"></td>
+            <td class="floor"></td>
+            <td class="floor"></td>
+            <td class="floor"></td>
+            <td class="floor"></td>
+            <td class="floor"></td>
+            <td class="floor"></td>
+            <td class="floor"></td>
+            <td class="floor"></td>
+            <td class="floor"></td>
+            <td class="floor"></td>
+            <td class="floor"></td>
+            <td class="floor"></td>
+            <td class="floor"></td>
+            <td class="wall-right"></td>
+            <td class="void"></td>
+        </tr>
+        <tr>
+            <td class="column-left2"></td>
+            <td class="column-left1"></td>
+            <td class="floor"></td>
+            <td class="floor"></td>
+            <td class="floor"></td>
+            <td class="floor"></td>
+            <td class="floor"></td>
+            <td class="floor"></td>
+            <td class="floor"></td>
+            <td class="floor"></td>
+            <td class="floor"></td>
+            <td class="floor"></td>
+            <td class="floor"></td>
+            <td class="floor"></td>
+            <td class="floor"></td>
+            <td class="floor"></td>
+            <td class="column-right1"></td>
+            <td class="column-right2"></td>
+        </tr>
+        <tr>
+            <td class="void"></td>
+            <td class="wall-left"></td>
+            <td class="floor"></td>
+            <td class="floor"></td>
+            <td class="floor"></td>
+            <td class="floor"></td>
+            <td class="floor"></td>
+            <td class="floor"></td>
+            <td class="floor"></td>
+            <td class="floor"></td>
+            <td class="floor"></td>
+            <td class="floor"></td>
+            <td class="floor"></td>
+            <td class="floor"></td>
+            <td class="floor"></td>
+            <td class="floor"></td>
+            <td class="wall-right"></td>
+            <td class="void"></td>
+        </tr>
+        <tr>
+            <td class="void"></td>
+            <td id="corner-bottom-left1"></td>
+            <td class="wall-bottom"></td>
+            <td class="wall-bottom"></td>
+            <td class="column-bottom1"></td>
+            <td class="wall-bottom"></td>
+            <td class="wall-bottom"></td>
+            <td class="wall-bottom"></td>
+            <td class="wall-bottom" id="door-bottom1"></td>
+            <td class="wall-bottom" id="door-bottom2"></td>
+            <td class="wall-bottom"></td>
+            <td class="wall-bottom"></td>
+            <td class="wall-bottom"></td>
+            <td class="column-bottom1"></td>
+            <td class="wall-bottom"></td>
+            <td class="wall-bottom"></td>
+            <td id="corner-bottom-right1"></td>
+            <td class="void"></td>
+        </tr>
+        <tr>
+            <td class="void"></td>
+            <td class="void"></td>
+            <td class="void"></td>
+            <td class="void"></td>
+            <td class="column-bottom2"></td>
+            <td class="void"></td>
+            <td class="void"></td>
+            <td class="void"></td>
+            <td class="void" id="door-bottom3"></td>
+            <td class="void" id="door-bottom4"></td>
+            <td class="void"></td>
+            <td class="void"></td>
+            <td class="void"></td>
+            <td class="column-bottom2"></td>
+            <td class="void"></td>
+            <td class="void"></td>
+            <td class="void"></td>
+            <td class="void"></td>
+        </tr>
+    </table>
+</body>
+
+</html>
+
+<script src="./app.js"></script>
